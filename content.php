@@ -26,10 +26,25 @@
 		?>
 
 	</header><!-- .entry-header -->
+	
+	<div class="post-date">
+		<?php
+		echo wp_date( get_option( 'date_format' ), get_post_timestamp() );
+		?>
+	</div>
 
 	<div class="entry-content">
 		<?php
-		the_content( esc_html__( 'Continue reading &rarr;', 'arke' ) );
+		if ( is_singular() ) :
+			the_content( esc_html__( 'Continue reading &rarr;', 'arke' ) );
+		else:
+			the_excerpt( esc_html__( 'Continue reading &rarr;', 'arke' ) );
+			echo sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
+				get_permalink( get_the_ID() ),
+				__( '阅读全文 &rarr;', 'textdomain' )
+        	);
+		endif;
+		
 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'arke' ),

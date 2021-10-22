@@ -120,11 +120,6 @@ h1 {
 	margin: 0.67em 0;
 }
 
-mark {
-	background: #ff0;
-	color: #000;
-}
-
 small {
 	font-size: 80%;
 }
@@ -266,7 +261,6 @@ th {
 --------------------------------------------------------------*/
 
 body {
-	color: #2f2f2f;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 1.7;
@@ -286,7 +280,6 @@ h4,
 h5,
 h6 {
 	line-height: 1.25;
-	color: #060606;
 }
 
 p {
@@ -356,10 +349,6 @@ html {
 	box-sizing: inherit;
 }
 
-body {
-	background-color: #fff; /* Fallback for when there is no custom background color defined. */
-}
-
 blockquote:before,
 blockquote:after,
 q:before,
@@ -373,7 +362,6 @@ q {
 }
 
 hr {
-	background-color: #ccc;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -444,7 +432,6 @@ table td {
 
 label {
 	font-size: 14px;
-	color: #9e9e9e;
 }
 
 button,
@@ -454,7 +441,6 @@ input[type="submit"] {
 	border: 1px solid;
 	border-color: #ccc #ccc #bbb;
 	border-radius: 3px;
-	background-color: #e6e6e6;
 	padding: 8px;
 }
 
@@ -492,7 +478,6 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 8px;
@@ -500,25 +485,6 @@ textarea {
 
 select {
 	border: 1px solid #ccc;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="range"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-	color: #111;
 }
 
 textarea {
@@ -560,16 +526,6 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-
-a {
-	color: #253e80;
-}
-
-a:hover,
-a:focus,
-a:active {
-	color: #3767b3;
-}
 
 a:focus {
 	outline: thin dotted;
@@ -654,7 +610,6 @@ body {
 
 .site-title a {
 	text-decoration: none;
-	color: #2d2e33;
 }
 
 .site-branding {
@@ -690,13 +645,9 @@ body {
 .menu-1 a {
 	display: block;
 	text-decoration: none;
-	color: #525252;
 	padding: 20px 0 20px 30px;
 }
 
-.menu-1 a:hover {
-	color: #3767b3;
-}
 
 /*--------------------------------------------------------------
 # Content
@@ -707,7 +658,7 @@ body {
 }
 
 .entry-header {
-	margin-bottom: 32px
+	margin-bottom: 8px
 }
 
 .entry-title {
@@ -717,15 +668,16 @@ body {
 
 .entry-title a {
 	text-decoration: none;
-	color: #060606;
-}
-
-.entry-title a:hover {
-	color: #3767b3;
 }
 
 .more-link {
 	text-decoration: none;
+}
+
+.post-date {
+	color: rgb(160, 160, 160);
+	font-size: 1em;
+	margin-bottom: 24px;
 }
 
 /*--------------------------------------------------------------
@@ -868,7 +820,7 @@ body {
 --------------------------------------------------------------*/
 
 .site-footer {
-	border-top: 1px solid #eaeaea;
+	border-top: 1px solid;
 	padding: 25px 0;
 	font-size: 14px;
 }
@@ -985,7 +937,7 @@ object {
 
 .archives__list li {
 		padding: 5px 0;
-    font-size: 14px;
+	font-size: 14px;
 }
 
 .archives__list li a {
@@ -1009,5 +961,193 @@ object {
 @media screen and (max-width: 640px) {
 	body {
 		padding: 0 5%
+	}
+}
+
+/*--------------------------------------------------------------
+# Light and dark mode
+--------------------------------------------------------------*/
+
+@media (prefers-color-scheme: light) {
+	mark {
+		background: #ff0;
+		color: #000;
+	}
+
+	body {
+		color: #2f2f2f;
+		background-color: #fff; /* Fallback for when there is no custom background color defined. */
+	}
+
+	h1,h2,h3,h4,h5,h6 {
+		color: #060606;
+	}
+
+	hr {
+		background-color: #ccc;
+	}
+
+	label {
+		color: #9e9e9e;
+	}
+
+	.site-title a {
+		color: #2d2e33;
+	}
+
+	.site-footer {
+		border-top-color: #eaeaea;
+	}
+
+	.entry-title a {
+		color: #060606;
+	}
+
+	.entry-title a:hover {
+		color: #3767b3;
+	}
+
+	.menu-1 a {
+		color: #525252;
+	}
+
+	.menu-1 a:hover {
+		color: #3767b3;
+	}
+
+	a {
+		color: #253e80;
+	}
+	
+	a:hover,
+	a:focus,
+	a:active {
+		color: #3767b3;
+	}
+
+	a.read-more {
+		color: black !important;
+	}
+
+	textarea {
+		color: #666;
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="url"]:focus,
+	input[type="password"]:focus,
+	input[type="search"]:focus,
+	input[type="number"]:focus,
+	input[type="tel"]:focus,
+	input[type="range"]:focus,
+	input[type="date"]:focus,
+	input[type="month"]:focus,
+	input[type="week"]:focus,
+	input[type="time"]:focus,
+	input[type="datetime"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="color"]:focus,
+	textarea:focus {
+		color: #111;
+	}
+
+	button {
+		background-color: #e6e6e6;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	mark {
+		background: #ff0;
+		color: #000;
+	}
+
+	body {
+		color: #f0f0f0;
+		background-color: #131313;
+	}
+
+	h1,h2,h3,h4,h5,h6 {
+		color: #fff;
+	}
+
+	.site-title a {
+		color: #f2f3f7;
+	}
+
+	hr {
+		background-color: #ddd;
+	}
+
+	label {
+		color: #cecece;
+	}
+
+	.site-footer {
+		border-top-color: #f0f0f0;
+	}
+
+	.entry-title a {
+		color: #f7f7f7;
+	}
+
+	.entry-title a:hover {
+		color: #8fb7f8;
+	}
+
+	.menu-1 a {
+		color: #f7f7f7;
+	}
+
+	.menu-1 a:hover {
+		color: rgb(90, 133, 202);
+	}
+
+	a {
+		color: #8aa6f3;
+	}
+	
+	a:hover,
+	a:focus,
+	a:active {
+		color: #79a6ee;
+	}
+
+	a.read-more {
+		color: #f0f0f0 !important;
+	}
+
+	textarea {
+		color: #f0f0f0;
+		background-color: #131313;
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="url"]:focus,
+	input[type="password"]:focus,
+	input[type="search"]:focus,
+	input[type="number"]:focus,
+	input[type="tel"]:focus,
+	input[type="range"]:focus,
+	input[type="date"]:focus,
+	input[type="month"]:focus,
+	input[type="week"]:focus,
+	input[type="time"]:focus,
+	input[type="datetime"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="color"]:focus,
+	textarea:focus {
+		color: #f0f0f0;
+	}
+
+	button {
+		background-color: #565656;
+		color: #131313;
+	}
+
+	input[type="submit"] {
+		background-color: #131313;
 	}
 }
