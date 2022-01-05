@@ -302,7 +302,6 @@ address {
 }
 
 pre {
-	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	line-height: 1.6;
@@ -969,6 +968,10 @@ object {
 --------------------------------------------------------------*/
 
 @media (prefers-color-scheme: light) {
+  pre {
+    background-color: #222;
+  }
+
 	mark {
 		background: #ff0;
 		color: #000;
@@ -1058,6 +1061,10 @@ object {
 }
 
 @media (prefers-color-scheme: dark) {
+  pre {
+    background-color: #222;
+  }
+
 	mark {
 		background: #ff0;
 		color: #000;
