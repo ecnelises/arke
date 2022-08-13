@@ -968,9 +968,9 @@ object {
 --------------------------------------------------------------*/
 
 @media (prefers-color-scheme: light) {
-  pre {
-    background-color: #222;
-  }
+	pre {
+		background-color: #efefef;
+	}
 
 	mark {
 		background: #ff0;
@@ -1061,9 +1061,9 @@ object {
 }
 
 @media (prefers-color-scheme: dark) {
-  pre {
-    background-color: #222;
-  }
+	pre {
+		background-color: #222;
+	}
 
 	mark {
 		background: #ff0;
